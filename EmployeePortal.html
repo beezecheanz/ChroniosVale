@@ -1,11 +1,27 @@
 <html>
 <head>
-<title>Chronios Vale</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <a href="Home.html" class="headerLink">Home</a>
 </head>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<h1>Welcome Employee</h1>
+<p>Here at Chronios Vale we love having employees, if you're interested in our job openings,
+    click here. (make link to page where it says no opening)</p>
+
+<!--login form -->
+<form action="action_page.php" method="post">
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+  </div>
+</form>
 
 </body>
 </html>
