@@ -2,32 +2,97 @@
   width: 50px;
   height: 50px;
   border: 1px solid black;
+  display: inline-block;
+  background-color: #e0e1dd;
 }
 
 .companyLogo img {
   width: 100%;
   height: 100%;
   object-fit: scale-down;
+  display: inline-block;
 }
 
 .headerLink {
-    border-right: 10px solid black;
-    padding: 10px;
+  border-radius: 10px;
+  border-right: 8px solid #e0e1dd;
+  padding: 10px;
 }
 
-.mainHomeText {
-    background-color: #778da9;
-    color: #e0e1dd;
+.currentHeaderLink {
+  border-radius: 10px;
+  border-right: 8px solid #e0e1dd;
+  padding: 10px;
+  color: #9fc490;
+  text-decoration: none;
 }
 
-head {
-    background-color: #1b263b;
+a {
+  color: #e0e1dd;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {  
+  color: #9fc490;
+  text-decoration: none;
+}
+
+.logoLinkHeader {
+  padding: 15px; 
+  background-color: #1b263b;
+  color: #e0e1dd;
 }
 
 body {
     background-color: #e0e1dd;
 }
 
+.companyName {
+    display: inline-block;
+}
+
+.introBanner {
+  height: 350px; 
+  background-image: url("chroniosbg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center; 
+}
+
+.introText {
+  background-color: #0d1b2a;
+  color: #e0e1dd;
+  padding: 40px;
+  width: 35%;
+  margin-left: 5%;
+}
+
+.introText h2 {
+  color: #9fc490; 
+  margin-top: 0;
+}
+
+.mainHomeText {
+    background-color: #778da9;
+    color: #e0e1dd;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 2%;
+    width: 35%;
+    margin-left: 5%;
+    display: inline-block;
+}
+
+.introVideo {
+    margin-top: 2%;
+    width: 35%;
+    margin-left: 5%;
+    display: inline-block;
+}
 
 
 
