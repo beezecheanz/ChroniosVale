@@ -13,18 +13,24 @@
   display: inline-block;
 }
 
+.pageLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .headerLink {
-  border-radius: 10px;
-  border-right: 8px solid #e0e1dd;
   padding: 10px;
+  margin-left: 10%;
+  font-size: larger;
 }
 
 .currentHeaderLink {
-  border-radius: 10px;
-  border-right: 8px solid #e0e1dd;
   padding: 10px;
+  margin-left: 10%;
   color: #9fc490;
   text-decoration: none;
+  font-size: larger;
 }
 
 a {
@@ -48,13 +54,25 @@ body {
     background-color: #e0e1dd;
 }
 
+footer {
+  padding: 2%;
+  background-color: #1b263b;
+  color: #e0e1dd;
+  margin-top: 1%;
+}
+
+.footerTitle {
+  color: #9fc490;
+}
+
 .companyName {
     display: inline-block;
 }
 
+/*HOME PAGE*/
 .introBanner {
   height: 350px; 
-  background-image: url("chroniosbg.png");
+  background-image: url("media/chroniosbg.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -74,6 +92,10 @@ body {
   margin-top: 0;
 }
 
+.mainHomeBlock {
+  display: flex
+}
+
 .mainHomeText {
     background-color: #778da9;
     color: #e0e1dd;
@@ -84,17 +106,28 @@ body {
     margin-top: 2%;
     width: 35%;
     margin-left: 5%;
-    display: inline-block;
 }
 
 .introVideo {
     margin-top: 2%;
     width: 35%;
     margin-left: 5%;
-    display: inline-block;
 }
 
 
+/*CONTACT PAGE*/
+
+.contactUsBox {
+  background-color: #778da9;
+  padding: 2%;
+  margin-top: 1%;
+}
+
+.contactInformation {
+  display: flex;
+  padding: 2%;
+  color: #1b263b;
+}
 
 /* Bordered form */
 form {
