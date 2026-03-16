@@ -114,6 +114,12 @@ footer {
     margin-left: 5%;
 }
 
+/*ABOUT PAGE*/
+
+.aboutLogo {
+  width: 50px;
+}
+
 
 /*CONTACT PAGE*/
 
@@ -127,6 +133,13 @@ footer {
   display: flex;
   padding: 2%;
   color: #1b263b;
+  font-size: x-large;
+}
+
+.contactEmail {
+  position: absolute;
+  right: 5%;
+  font-size: xx-large;
 }
 
 /* Bordered form */
