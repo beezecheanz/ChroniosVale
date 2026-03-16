@@ -1,9 +1,67 @@
 <html>
 <head>
-    <link rel="stylesheet" href="stylesheet.css">
-    <a href="Home.html">Home</a>
+<link rel="stylesheet" href="stylesheet.css">
+<title>Chronios Vale</title>
+<div class="logoLinkHeader">
+    <div class="companyLogo">
+        <img src="media/chronioslogo.png">
+    </div>
+    <h1 class="companyName">Chronios Vale</h1>
+    <div class="pageLinks">
+    <a href="Home.html" class="headerLink">Home</a>
+    <a href="About.html" class="headerLink">About Us</a>
+    <a href="Contact.html" class="headerLink">Contact</a>
+    <a href="employeeAccess.html" class="currentHeaderLink">Employee Portal</a>
+    </div>
+</div>
 </head>
 <body>
-    <p>Welcome back employee, here is an employee document, enjoy</p
+
+<h1>Welcome to the future</h1>
+<p>Current Chronios Vale employees can access our employee portal through this form.
+   Each employee should have a unique password to use alongside your username.
+</p>
+
+<!--login form -->
+<form onsubmit="return checkLogin()">
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" id="uname" placeholder="Enter Username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="psw" placeholder="Enter Password" required>
+
+    <button type="submit">Login</button>
+  </div>
+
+</form>
+
+<!-- send users to employee page if they use correct credentials-->
+<script>
+function checkLogin() {
+  var username = document.getElementById("uname").value;
+  var password = document.getElementById("psw").value;
+
+  //makes username all lowercase with no spaces
+  let usernameInput = username.toLowerCase().replace(/\s+/g, "");
+  
+  //checks what username and password and sends them to correct page
+  if (usernameInput === "janesmith" && password === "apple") {
+    window.location.href = "employeePortal.html";
+    return false;
+  } else {
+    alert("Invalid login credentials");
+    return false;
+  }
+}
+</script>
+
 </body>
+<footer>
+    <h3 class="footerTitle">Chronios Vale 2026</h3>
+    <p>All characters and corporations or establishments appearing in 
+        this work are fictitious. Any resemblance to real companies or persons is purely 
+        coincidental. Do not contact other companies with similar names.</p>
+</footer>
 </html>

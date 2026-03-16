@@ -1,61 +1,9 @@
 <html>
 <head>
-<link rel="stylesheet" href="stylesheet.css">
-<title>Chronios Vale</title>
-<div class="logoLinkHeader">
-    <div class="companyLogo">
-        <img src="media/chronioslogo.png">
-    </div>
-    <h1 class="companyName">Chronios Vale</h1>
-    <div class="pageLinks">
-    <a href="Home.html" class="headerLink">Home</a>
-    <a href="About.html" class="headerLink">About Us</a>
-    <a href="Contact.html" class="headerLink">Contact</a>
-    <a href="EmployeePortal.html" class="currentHeaderLink">Employee Portal</a>
-    </div>
-</div>
+    <link rel="stylesheet" href="stylesheet.css">
+    <a href="Home.html">Home</a>
 </head>
 <body>
-
-<h1>Welcome Employee</h1>
-<p>Here at Chronios Vale we love having employees, here is where employees can log on.</p>
-
-<!--login form -->
-<form onsubmit="return checkLogin()">
-
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" id="uname" placeholder="Enter Username" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" id="psw" placeholder="Enter Password" required>
-
-    <button type="submit">Login</button>
-  </div>
-
-</form>
-
-<!-- send users to employee page if they use correct credentials-->
-<script>
-function checkLogin() {
-  var username = document.getElementById("uname").value;
-  var password = document.getElementById("psw").value;
-
-  if ((username == "JaneSmith"  || "janesmith") && password == "apple") {
-    window.location.href = "employeeAccess.html";
-    return false;
-  } else {
-    alert("Invalid login credentials");
-    return false;
-  }
-}
-</script>
-
+    <p>Welcome back employee, here is an employee document, enjoy</p
 </body>
-<footer>
-    <h3 class="footerTitle">Chronios Vale 2026</h3>
-    <p>All characters and corporations or establishments appearing in 
-        this work are fictitious. Any resemblance to real companies or persons is purely 
-        coincidental. Do not contact other companies with similar names.</p>
-</footer>
 </html>
