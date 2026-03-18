@@ -1,0 +1,60 @@
+.layout {
+    display: flex;
+}
+
+.sideBarBlock {
+    width: 250px;
+    min-height: 100vh; 
+    background-color: #1b263b;
+    padding: 20px;
+}
+
+.sideBarItem {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.sideBarItem:hover {
+    background-color: #2e3f55;
+}
+
+body {
+    background-color: #e0e1dd;
+}
+
+.mainContent {
+    flex: 1;
+    padding: 20px;
+}
+
+.card {
+    background-color: #778da9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-top: 2%;
+}
+
+.warning {
+    border-left: 10px solid red;
+    background-color: #415a77;
+    color: #e0e1dd;
+}
+
+/*EMPLOYEE HANDBOOK PAGE*/
+
+.dashboardGrid {
+    padding: 1%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.profileCard {
+    grid-column: span 2;
+}
