@@ -30,6 +30,7 @@ body {
 .mainContent {
     flex: 1;
     padding: 20px;
+    width: 100vw;
 }
 
 .card {
@@ -38,6 +39,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     margin-top: 2%;
+    box-shadow: 10px 10px #1b263b;
 }
 
 .warning {
