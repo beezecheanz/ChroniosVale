@@ -8,7 +8,7 @@
             <a href="employeePortal.html" style="color:#9fc490" class="sideBarItem">Welcome</a>
             <a href="employeeInfo.html" class="sideBarItem">Dashboard</a>
             <a href="employeeHandbook.html" class="sideBarItem">Handbook</a>
-            <a href="Home.html" class="sideBarItem">Public Home</a>
+            <a href="Home.html" class="sideBarItem" onclick="return confirmLogout()">Public Home</a>
         </div>
 
         <div class="mainContent">
@@ -41,4 +41,60 @@
     </div>
 
 </body>
+
+    <script>
+    function confirmLogout() {
+        return confirm("Warning: You are about to exit the employee system.\nAre you sure?");
+    }
+    </script>
+
+    <script>
+    window.onload = function() {
+
+    let hasVisited = localStorage.getItem("visitedPortal");
+
+    if (hasVisited) {
+        //glitches after they visit at least once
+
+        let chance = Math.random();
+
+        if (chance < 0.3) { // 30% chance
+            showGlitch();
+        }
+    }
+
+    //set it to visited
+    localStorage.setItem("visitedPortal", "true");
+    };
+
+    function showGlitch() {
+        let glitch = document.createElement("div");
+        glitch.innerText = "They don't say thank you anymore.";
+
+        glitch.style.position = "fixed";
+        glitch.style.top = "50%";
+        glitch.style.left = "50%";
+        glitch.style.transform = "translate(-50%, -50%)";
+        glitch.style.fontSize = "32px";
+        glitch.style.color = "orange";
+        glitch.style.backgroundColor = "black";
+        glitch.style.padding = "20px";
+        glitch.style.zIndex = "9999";
+
+        document.body.appendChild(glitch);
+
+        let flashes = 0;
+
+        let interval = setInterval(() => {
+            glitch.style.display = (glitch.style.display === "none") ? "block" : "none";
+            flashes++;
+
+            if (flashes > 6) {
+                clearInterval(interval);
+                glitch.remove();
+            }
+        }, 100);
+    }
+    </script>
+
 </html>

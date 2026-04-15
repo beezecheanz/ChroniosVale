@@ -11,7 +11,7 @@
             <a href="employeePortal.html" class="sideBarItem">Welcome</a>
             <a href="employeeInfo.html" style="color:#9fc490" class="sideBarItem">Dashboard</a>
             <a href="employeeHandbook.html" class="sideBarItem">Handbook</a>
-            <a href="Home.html" class="sideBarItem">Public Home</a>
+            <a href="Home.html" class="sideBarItem" onclick="return confirmLogout()">Public Home</a>
         </div>
 
     <div class="dashboardGrid">
@@ -49,4 +49,10 @@
     </div>
     </div>
     </body>
+
+    <script>
+        function confirmLogout() {
+        return confirm("Warning: You are about to exit the employee system.\nAre you sure?");
+    }
+    </script>
 </html>
