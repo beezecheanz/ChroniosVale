@@ -51,49 +51,63 @@
     <script>
     window.onload = function() {
 
-    let hasVisited = localStorage.getItem("visitedPortal");
+        let hasVisited = localStorage.getItem("visitedPortal");
+        let glitchSeen = localStorage.getItem("glitchSeen");
 
-    if (hasVisited) {
         //glitches after they visit at least once
+        if (hasVisited && !glitchSeen) {
 
-        let chance = Math.random();
+            let chance = Math.random();
 
-        if (chance < 0.3) { // 30% chance
-            showGlitch();
+            if (chance < 0.01) { //10% chance
+                showGlitch();
+                localStorage.setItem("glitchSeen", "true");
+            }
         }
-    }
 
-    //set it to visited
-    localStorage.setItem("visitedPortal", "true");
+        localStorage.setItem("visitedPortal", "true");
     };
 
     function showGlitch() {
-        let glitch = document.createElement("div");
-        glitch.innerText = "They don't say thank you anymore.";
 
+        //glitchy overlay
+        let glitch = document.createElement("div");
+        glitch.innerText = "they don't say thank you anymore";
+        
+        document.body.style.filter = "invert(1)";
+        setTimeout(() => {
+        document.body.style.filter = "invert(0)";
+        }, 300);
         glitch.style.position = "fixed";
-        glitch.style.top = "50%";
-        glitch.style.left = "50%";
-        glitch.style.transform = "translate(-50%, -50%)";
+        glitch.style.top = "0";
+        glitch.style.left = "0";
+        glitch.style.width = "100%";
+        glitch.style.height = "100%";
+        glitch.style.display = "flex";
+        glitch.style.justifyContent = "center";
+        glitch.style.alignItems = "center";
+
         glitch.style.fontSize = "32px";
-        glitch.style.color = "orange";
-        glitch.style.backgroundColor = "black";
-        glitch.style.padding = "20px";
+        glitch.style.fontFamily = "monospace";
+        glitch.style.color = "#ff3c3c";
+        glitch.style.backgroundColor = "rgba(0,0,0,0.85)";
         glitch.style.zIndex = "9999";
+        glitch.style.letterSpacing = "2px";
 
         document.body.appendChild(glitch);
 
+        //flickering
         let flashes = 0;
 
         let interval = setInterval(() => {
-            glitch.style.display = (glitch.style.display === "none") ? "block" : "none";
+            glitch.style.opacity = (glitch.style.opacity == "0") ? "1" : "0";
             flashes++;
 
-            if (flashes > 6) {
+            if (flashes > 8) {
                 clearInterval(interval);
                 glitch.remove();
             }
-        }, 100);
+        }, 200);
     }
     </script>
 
