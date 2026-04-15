@@ -13,13 +13,66 @@
 
         <div class="mainContent">
 
+        <h1>Employee Onboarding</h1>
+
+        <div class="onboardingText">
+            <p>Welcome to Chronios Vale. As part of your integration into our systems, all employees are required to complete this onboarding module.</p>
+            <p>Employees are expected to maintain professionalism at all times and follow internal protocols without deviation.</p>
+            <p>All systems you interact with are monitored to ensure optimal performance and behavioural consistency.</p>
+            <p>Failure to comply with company standards may result in access restrictions.</p>
+            <p>Please complete this short form to check that you have retained knowledge from your in person training.</p>
+        </div>
+
+        <h2>Compliance Check</h2>
+
+        <form id="quizForm">
+            <p>1. What is the priority of all employees?</p>
+            <label><input type="radio" name="q1" value="a"> Personal success</label><br>
+            <label><input type="radio" name="q1" value="b"> Company objectives</label><br>
+
+            <p>2. What should you do if instructed by the system?</p>
+            <label><input type="radio" name="q2" value="a"> Question it</label><br>
+            <label><input type="radio" name="q2" value="b"> Follow instructions</label><br>
+
+            <p>3. Are system outputs ever incorrect?</p>
+            <label><input type="radio" name="q3" value="a"> Yes</label><br>
+            <label><input type="radio" name="q3" value="b"> No</label><br>
+
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="result"></p>
+        </div>
     </div>
-    </div>
-    </body>
+</body>
 
     <script>
         function confirmLogout() {
         return confirm("Warning: You are about to exit the employee system.\nAre you sure?");
     }
+    </script>
+
+    <script>
+    document.getElementById("quizForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let q1 = document.querySelector('input[name="q1"]:checked');
+        let q2 = document.querySelector('input[name="q2"]:checked');
+        let q3 = document.querySelector('input[name="q3"]:checked');
+
+        if (!q1 || !q2 || !q3) {
+            document.getElementById("result").innerText = "Please answer all questions.";
+            return;
+        }
+
+        //the correct answers
+        if (q1.value === "b" && q2.value === "b" && q3.value === "b") {
+            document.getElementById("result").innerText = "Good work. \nAccess Granted. Code: CV-1173";
+
+        } else {
+            document.getElementById("result").innerText = "Responses flagged. Please review company policies.";
+        }
+    });
     </script>
 </html>

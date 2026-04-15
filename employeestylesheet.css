@@ -86,3 +86,25 @@ body {
 .profileCard {
     grid-column: span 2;
 }
+
+/*ONBOARDING QUIZ PAGE*/
+.onboardingText {
+    background-color: #e0e1dd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1b263b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
