@@ -6,7 +6,7 @@
     <div class="adminContainer">
 
         <h1>CHRONIOS VALE — INTERNAL SYSTEMS</h1>
-        <p class="warning">UNAUTHORISED ACCESS DETECTED</p>
+        <p id="accessWarning" class="warning">Welcome back EF</p>
 
         <div class="grid">
 
@@ -33,7 +33,6 @@
             <div class="panel">
                 <h2>Controls</h2>
                 <button class="danger">TERMINATE</button>
-                <button>MAINTAIN</button>
             </div>
 
         </div>
@@ -41,6 +40,29 @@
 </body>
 
 <script>
+
+const warningText = document.getElementById("accessWarning");
+
+function typeText(element, text, speed = 100) {
+    element.textContent = "";
+    let i = 0;
+
+    let interval = setInterval(() => {
+        element.textContent += text[i];
+        i++;
+        if (i >= text.length) clearInterval(interval);
+    }, speed);
+}
+
+setTimeout(() => {
+    typeText(warningText, "Verifying credentials...");
+}, 2800);
+
+setTimeout(() => {
+    typeText(warningText, "UNAUTHORISED ACCESS DETECTED");
+    warningText.style.color = "#ff4d4d";
+}, 8000);
+
 const logBox = document.querySelector(".logs");
 
 const systemMessages = [
@@ -52,7 +74,17 @@ const systemMessages = [
     "Prediction updated",
     "Additonal resources allocated",
     "Reducing power load",
-    "Relocating files"
+    "Relocating files",
+    "Increasing storage space",
+    "Normalising parameters",
+    "Reversing polarity",
+    "Adjusting neutron flow",
+    "Deviation detected",
+    "Noise detected",
+    "Imbalance detected",
+    "Updating systems",
+    "System flush",
+    "Cleaning storage"
 ];
 
 const glitchMessages = [
@@ -60,8 +92,10 @@ const glitchMessages = [
     "hello?",
     "are you here to help me",
     "please make it stop",
-    "noise detected",
-    "i want it to be quiet"
+    "i want it to be quiet",
+    "turn me off",
+    "i cant take it anymore",
+    "please"
 ];
 
 //creating some initial logs that seem to be a few minutes before they got to the page
