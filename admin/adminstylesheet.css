@@ -1,0 +1,71 @@
+body {
+    background-color: #0b0f14;
+    color: #c5d1e0;
+    font-family: monospace;
+    margin: 0;
+}
+
+.adminContainer {
+    padding: 30px;
+}
+
+h1 {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.warning {
+    color: #ff4d4d;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.panel {
+    background-color: #111827;
+    padding: 15px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.panel h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #9fc490;
+}
+
+.logs {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+button {
+    background: none;
+    border: 1px solid #9fc490;
+    color: #9fc490;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9fc490;
+    color: #0b0f14;
+}
+
+.danger {
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+}
+
+.danger:hover {
+    background-color: darkorange;
+}
+
+.glitch {
+    color: darkorange;
+    opacity: 0.8;
+}

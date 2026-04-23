@@ -93,8 +93,7 @@
 
         //the correct answers
         if (q1.value === "a" && q2.value === "b" && q3.value === "b" && q4.value === "b" && q5.value === "a" && q6.value === "a") {
-            document.getElementById("result").innerText = "Good work. \nAccess is now Granted. Code: CV-1173";
-
+            document.getElementById("result").innerHTML = "Good work.<br>Access is now granted.<br>Code: <span class='codeHighlight'>CV-117318</span>";
         } else {
             document.getElementById("result").innerText = "Responses flagged. Please review company policies by either attending another in person training session or rereading the employee handbook.";
         }

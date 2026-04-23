@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="adminstylesheet.css">
+    </head>
+<body>
+    <div class="adminContainer">
+
+        <h1>CHRONIOS VALE — INTERNAL SYSTEMS</h1>
+        <p class="warning">UNAUTHORISED ACCESS DETECTED</p>
+
+        <div class="grid">
+
+            <div class="panel">
+                <h2>System Override Status</h2>
+                <p>> Prediction Engine: ACTIVE</p>
+                <p>> Ethical Safeguards: DISABLED</p>
+                <p>> Subject Stability: DEGRADING</p>
+            </div>
+
+            <div class="panel">
+                <h2>Live Logs</h2>
+                <div class="logs"></div>
+            </div>
+
+            <div class="panel">
+                <h2>Subject Profile</h2>
+                <p>ID: CV-01</p>
+                <p>Status: Integrated</p>
+                <p>Consciousness: Fragmented</p>
+                <p class="glitch">Output interference detected</p>
+            </div>
+
+            <div class="panel">
+                <h2>Controls</h2>
+                <button class="danger">TERMINATE</button>
+                <button>MAINTAIN</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+const logBox = document.querySelector(".logs");
+
+const systemMessages = [
+    "Signal received",
+    "Input received",
+    "Pattern mismatch",
+    "Behaviour deviation detected",
+    "Adjusting parameters",
+    "Prediction updated",
+    "Additonal resources allocated",
+    "Reducing power load",
+    "Relocating files"
+];
+
+const glitchMessages = [
+    "why won't they listen",
+    "hello?",
+    "are you here to help me",
+    "please make it stop",
+    "noise detected",
+    "i want it to be quiet"
+];
+
+//creating some initial logs that seem to be a few minutes before they got to the page
+function generateInitialLogs() {
+    let now = new Date();
+
+    for (let i = 5; i > 0; i--) {
+        let pastTime = new Date(now.getTime() - i * 53200);
+        let message = systemMessages[Math.floor(Math.random() * systemMessages.length)];
+
+        let logLine = document.createElement("p");
+        logLine.innerText = "[" + pastTime.toLocaleTimeString() + "] " + message;
+        logBox.appendChild(logLine);
+    }
+}
+generateInitialLogs();
+
+//live updating logs
+setInterval(() => {
+    const newLine = document.createElement("p");
+
+    let message;
+    if (Math.random() < 0.8) {
+        message = systemMessages[Math.floor(Math.random() * systemMessages.length)];
+    } else {
+        message = glitchMessages[Math.floor(Math.random() * glitchMessages.length)];
+    }
+
+    newLine.innerText = "[" + new Date().toLocaleTimeString() + "] " + message;
+
+    if (glitchMessages.includes(message)) {
+    newLine.classList.add("glitch");
+    }
+
+    logBox.appendChild(newLine);
+    logBox.scrollTop = logBox.scrollHeight;
+
+}, 12000);
+</script>
+
+</html>

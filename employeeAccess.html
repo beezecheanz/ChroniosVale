@@ -22,6 +22,7 @@
    Each employee should have a unique password to use alongside your username.
 </p>
 
+<!--ELI F 11***8-->
 <!--login form -->
 <form onsubmit="return checkLogin()">
 
@@ -49,6 +50,10 @@ function checkLogin() {
   //checks what username and password and sends them to correct page
   if (usernameInput === "janesmith" && password === "apple") {
     window.location.href = "employeePortal.html";
+    return false;
+  }
+  else if (usernameInput === "elifreeman" && password === "117318") {
+    window.location.href = "admin/adminDashboard.html";
     return false;
   } else {
     alert("Invalid login credentials");
