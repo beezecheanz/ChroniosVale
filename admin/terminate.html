@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="adminstylesheet.css">
+    </head>
+<body>
+<div class="terminal">
+    <h1>EMERGENCY TERMINATION PROTOCOL</h1>
+    <P>Make sure that there is no other course of action before committing to this,
+    there is no way to undo termination.</P>
+    <div class="progressContainer">
+        <div id="progressBar"></div>
+    </div>
+    <button id="holdButton">HOLD TO TERMINATE</button>
+</div>
+</body>
+</html>
+
+<script>
+const button = document.getElementById("holdButton");
+const bar = document.getElementById("progressBar");
+let progress = 0;
+let interval = null;
+
+button.addEventListener("mousedown", () => {
+    interval = setInterval(() => {
+        progress += 1; //speed of bar filling 
+
+        if (progress >= 100) {
+            progress = 100;
+            clearInterval(interval);
+            window.location.href = "terminateComplete.html";
+        }
+        bar.style.width = progress + "%";
+    }, 50);
+});
+
+button.addEventListener("mouseup", () => {
+    clearInterval(interval);
+    progress = 0;
+    bar.style.width = progress + "%";
+});
+
+button.addEventListener("mouseleave", () => {
+    clearInterval(interval);
+    progress = 0;
+    bar.style.width = progress + "%";
+});
+</script>

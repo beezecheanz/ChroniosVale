@@ -56,6 +56,8 @@ button:hover {
     color: #0b0f14;
 }
 
+/*ADMIN DASHBOARD PAGE*/
+
 .danger {
     border-color: #ff4d4d;
     color: #ff4d4d;
@@ -68,4 +70,20 @@ button:hover {
 .glitch {
     color: darkorange;
     opacity: 0.8;
+}
+
+/*TERMINATION PAGE*/
+
+.progressContainer {
+    width: 100%;
+    height: 20px;
+    background-color: #222;
+    margin: 20px 0;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background-color: darkorange;
+    transition: width 0.1s linear;
 }
