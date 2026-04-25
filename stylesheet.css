@@ -127,13 +127,12 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   padding: 80px 10%;
-  gap: 60px;
 }
 
 .aboutTitle {
   color: #0d1b2a;
   font-size: xx-large;
-  margin: 0px;
+  margin: 2%;
   min-width: 200px;
   position: relative;
 }
@@ -212,21 +211,42 @@ footer {
 
 .contactUsBox {
   background-color: #778da9;
-  padding: 2%;
+  padding: 60px 10%;
   margin-top: 1%;
+}
+
+.contactUsBox h1 {
+  margin: 0;
+  font-size: 48px;
+  color: #0d1b2a;
 }
 
 .contactInformation {
   display: flex;
-  padding: 2%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 5%;
   color: #1b263b;
-  font-size: x-large;
+}
+
+.contactText h3 {
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 1.5;
 }
 
 .contactEmail {
-  position: absolute;
-  right: 5%;
   font-size: xx-large;
+  font-weight: bold;
+  padding: 15px 25px;
+  border: 2px solid #415a77;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.contactEmail p:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /*EMPLOYEE ACCESS PAGE*/
