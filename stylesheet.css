@@ -126,6 +126,7 @@ footer {
   display: flex;
   justify-content: center;
   padding: 2%;
+  margin-right: 2%;
 }
 
 .aboutTitle {
@@ -136,7 +137,7 @@ footer {
 }
 
 .introInfo {
-  font-size: x-large;
+  font-size: large;
   width: 100%;
 }
 
@@ -144,6 +145,7 @@ footer {
   display: flex;
   justify-content: center;
 }
+
 .childInfo { 
     float: left; 
     width: 27%; 
@@ -158,6 +160,13 @@ footer {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     margin: 2%;
     box-shadow: 10px 10px #1b263b;
+    display: flex;      
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.mainEmployees {
+  margin: 2%;
 }
 
 .employeeBlurb {
@@ -165,9 +174,14 @@ footer {
 }
 
 .employeePortrait {
-  width: 20%;
-  border-radius: 10px;
-  border: 5px solid #1b263b;
+    width: 240px;  
+    border-radius: 10px;
+    border: 5px solid #1b263b;
+}
+
+.employeeRole {
+    font-size: 0.9em;
+    opacity: 0.8;
 }
 
 /*CONTACT PAGE*/
