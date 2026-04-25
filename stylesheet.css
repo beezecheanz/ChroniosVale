@@ -124,21 +124,45 @@ footer {
 
 .aboutIntro {
   display: flex;
-  justify-content: center;
-  padding: 2%;
-  margin-right: 2%;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 10%;
+  gap: 60px;
 }
 
 .aboutTitle {
   color: #0d1b2a;
   font-size: xx-large;
-  padding: 2%;
-  width: 50%;
+  margin: 0px;
+  min-width: 200px;
+  position: relative;
+}
+
+.aboutTitle::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 4px;
+  background-color: #415a77;
+  margin-top: 10px;
+}
+
+.infoCardTitle::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 4px;
+  background-color: #415a77;
+  margin-top: 10px;
 }
 
 .introInfo {
   font-size: large;
-  width: 100%;
+  max-width: 600px;
+}
+
+.introInfo p {
+  margin-bottom: 20px;
 }
 
 .allInfo {
