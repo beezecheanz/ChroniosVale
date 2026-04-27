@@ -52,6 +52,7 @@ a:hover {
 
 body {
     background-color: #e0e1dd;
+    font-family: sans-serif;
 }
 
 footer {
@@ -177,7 +178,7 @@ footer {
 } 
 
 .card {
-    background-color: #778da9;
+    background-color: #96abc6;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -209,6 +210,9 @@ footer {
 
 /*CONTACT PAGE*/
 
+.hiddenMessage {
+  color: darkorange;
+}
 .contactUsBox {
   background-color: #778da9;
   padding: 60px 10%;
@@ -254,14 +258,16 @@ footer {
 /* form*/
 form {
   border: 3px solid #1b263b;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 /* taking input */
 input[type=text], input[type=password] {
-  width: 100%;
+  width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
-  display: inline-block;
+  display: flex;
   border: 1px solid #e0e1dd;
   box-sizing: border-box;
 }
@@ -282,6 +288,8 @@ button:hover {
 
 .container {
   padding: 16px;
+  padding-right: 100px;
+  padding-left: 100px;
 }
 
 /* Change styles for span and cancel button on extra small screens */
