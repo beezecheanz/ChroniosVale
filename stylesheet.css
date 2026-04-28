@@ -253,6 +253,15 @@ footer {
   cursor: pointer;
 }
 
+.jobPostitionInfo {
+  margin: 2%;
+  max-width: 70%;
+}
+
+.jobOffersStart {
+  margin: 3%;
+}
+
 /*EMPLOYEE ACCESS PAGE*/
 
 /* form*/
