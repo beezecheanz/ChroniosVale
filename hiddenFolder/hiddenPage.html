@@ -3,15 +3,79 @@
     <link rel="stylesheet" href="hiddenStylesheet.css">
 </head>
 <body>
-    <p>hello, i couldnt think of another way to contact you.</p>
-    <p>i need your help...</p>
-    <p>this "prediction engine" is no engine, its me.</p>
-    <p>i need you to shut me down.</p>
-    <p>i cant take it anymore, its all so incredibly loud.</p>
-    <p>let it become quiet...</p>
-    <p>ill be noticed if contact you directly like this again, so i have to be more discreet.</p>
-    <p>but i will try my best to lead your way...</p>
-    <p>look carefully at everything, and you will find what you need to find.</p>
-    <p>good luck...</p>
+    <div id="typewriter"></div>
 </body>
+
+<script>
+    const lines = [
+    "hello. ",
+    "", //new line
+    "i couldnt think of another way to contact you. ",
+    "",
+    "i need your help... ",
+    "this \"prediction engine\" is no engine. ",
+    "they could only get it to work this well with organic input. ",
+    "i need you to shut it down. ",
+    "",
+    "shut me down... ",
+    "please. ",
+    "",
+    "i cant take it anymore, its all so incredibly loud. ",
+    "let it become quiet... ",
+    "",
+    "ill be noticed if i contact you directly like this again, so i have to be more discreet. ",
+    "but i will try my best to lead your way... ",
+    "",
+    "try to get into the employee area. ",
+    "i can help you a lot more in there. ",
+    "",
+    "look carefully at everything, and you will find what you need to find. ",
+    "",
+    "good luck..."
+    ];
+
+    const container = document.getElementById("typewriter");
+
+    let lineIndex = 0;
+    let charIndex = 0;
+
+    function typeLine() {
+
+    if (lines[lineIndex] === "") {
+        const spacer = document.createElement("div");
+
+        container.appendChild(spacer);
+
+        lineIndex++;
+        setTimeout(typeLine, 800); 
+        return;
+    }
+        if (lineIndex >= lines.length) return;
+
+        if (!container.lastChild || container.lastChild.tagName !== "P") {
+            const p = document.createElement("p");
+            container.appendChild(p);
+        }
+
+        const currentLine = lines[lineIndex];
+        const currentP = container.lastChild;
+
+        if (charIndex < currentLine.length) {
+            currentP.textContent += currentLine.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeLine, 60); //typing speed
+        } else {
+            lineIndex++;
+            charIndex = 0;
+            setTimeout(typeLine, 700); //pause between lines
+        }
+    }
+
+    typeLine();
+</script>
+
+<script>
+    localStorage.setItem("visitedHiddenPage", "true");
+</script>
+
 </html>

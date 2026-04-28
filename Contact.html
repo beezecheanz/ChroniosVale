@@ -31,8 +31,8 @@
     </div>
     </div>
 
-    <a href="hiddenFolder/hiddenPage.html" class="hiddenMessage">hello?</a>
-    
+    <a href="hiddenFolder/hiddenPage.html" id="hiddenLink" class="hiddenMessage">hello?</a>
+
     <div class="contactUsBox">
     <h1>Work With Us</h1>
     </div>
@@ -74,4 +74,16 @@
         this work are fictitious. Any resemblance to real companies or persons is purely 
         coincidental. Do not contact other companies with similar names.</p>
 </footer>
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("visitedHiddenPage") === "true") {
+        const link = document.getElementById("hiddenLink");
+        if (link) {
+            link.style.display = "none";
+        }
+    }
+});
+</script>
+
 </html>
