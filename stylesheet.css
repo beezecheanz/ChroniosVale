@@ -194,7 +194,7 @@ footer {
 }
 
 .employeeBlurb {
-  max-width: 50%;
+  margin: 1%;
 }
 
 .employeePortrait {
@@ -206,6 +206,7 @@ footer {
 .employeeRole {
     font-size: 0.9em;
     opacity: 0.8;
+    margin-left: 2%;
 }
 
 /*CONTACT PAGE*/
