@@ -55,13 +55,29 @@
     <div class="contactUsBox">
     <h1>Case Studies</h1>
     </div>
-    <p>THIS WILL BE PRETTY SOON Case studies here, 3 options, click title to reveal info on each</p>
-    <h3>Helios Eternal</h3>
-    <p>The Helios Eternal company is fueled by innovation, always evolving and striving for efficiency.
-        To assist them with this vision, we have worked alongside their data analysis team for over 10 years.
-    </p>
-    <p>65% increase in profits</p>
-    <p>2x increase in monthly customers</p>
+    <div class="caseStudiesSection">
+    <p class="caseIntro">Explore how Chronios Vale supports well known organisations
+         through our predictive systems and data driven strategies.</p>
+    <div class="caseTabs">
+        <button class="caseBtn active" onclick="showCase('helios')">Helios Eternal</button>
+        <button class="caseBtn" onclick="showCase('aeternum')">Aeternum Logistics</button>
+        <button class="caseBtn" onclick="showCase('pandorica')">Pandorica Systems</button>
+    </div>
+    <div class="caseContent" id="caseContent">
+        <h2>Helios Eternal</h2>
+        <p>
+            Helios Eternal is driven by continuous innovation and operational efficiency.
+             Chronios Vale partnered with their internal analytics division to enhance predictive
+             modelling across a ten year engagement.
+        </p>
+        <div class="caseStats">
+            <div><span>65%</span><p>increase in profits</p></div>
+            <div><span>2x</span><p>increase in monthly customers</p></div>
+        </div>
+    </div>
+
+
+</div>
 
 </body>
 <footer>
@@ -70,5 +86,53 @@
         this work are fictitious. Any resemblance to real companies or persons is purely 
         coincidental. Do not contact other companies with similar names.</p>
 </footer>
+
+<script>
+function showCase(caseName) {
+    const content = document.getElementById("caseContent");
+    const buttons = document.querySelectorAll(".caseBtn");
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    event.target.classList.add("active");
+
+    if (caseName === "helios") {
+        content.innerHTML = `
+            <h2>Helios Eternal</h2>
+            <p>Helios Eternal is driven by continuous innovation and operational efficiency.
+             Chronios Vale partnered with their internal analytics division to enhance predictive
+             modelling across a ten year engagement.</p>
+            <div class="caseStats">
+                <div><span>65%</span><p>increase in profits</p></div>
+                <div><span>2x</span><p>increase in monthly customers</p></div>
+            </div>
+        `;
+    }
+
+    if (caseName === "aeternum") {
+        content.innerHTML = `
+            <h2>Aeternum Logistics</h2>
+            <p>Aeternum required optimisation across global supply chains. Our systems reduced
+                 uncertainty and improved long term forecasting accuracy.</p>
+            <div class="caseStats">
+                <div><span>40%</span><p>reduction in delays</p></div>
+                <div><span>87%</span><p>forecast accuracy</p></div>
+            </div>
+        `;
+    }
+
+    if (caseName === "pandorica") {
+        content.innerHTML = `
+            <h2>Pandorica Systems</h2>
+            <p>Pandorica partnered with Chronios Vale to explore advanced behavioural modelling.
+                 Early trials produced highly consistent predictive outputs.</p>
+            <div class="caseStats">
+                <div><span>Stable</span><p>subject outputs</p></div>
+                <div><span>40%</span><p>increase in compliance rates</p></div>
+            </div>
+        `;
+    }
+}
+</script>
 
 </html>

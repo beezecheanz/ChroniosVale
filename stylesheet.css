@@ -117,6 +117,58 @@ footer {
     margin-left: 5%;
 }
 
+.caseStudiesSection {
+    padding: 4%;
+}
+
+.caseIntro {
+    margin-bottom: 30px;
+    color: #1b263b;
+}
+
+.caseTabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.caseBtn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e0e1dd;
+    color: #1b263b;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.caseBtn:hover {
+    background-color: #778da9;
+    color: white;
+}
+
+.caseBtn.active {
+    background-color: #415a77;
+    color: white;
+}
+
+.caseContent {
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.caseStats {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.caseStats span {
+    font-size: 32px;
+    color: #415a77;
+}
+
 /*ABOUT PAGE*/
 
 .aboutLogo {
