@@ -117,6 +117,12 @@ footer {
     margin-left: 5%;
 }
 
+.introVideo video {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    object-fit: cover;
+}
+
 .caseStudiesSection {
     padding: 4%;
 }
@@ -341,7 +347,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 80%;
 }
 
 button:hover {
@@ -350,11 +356,11 @@ button:hover {
 
 .container {
   padding: 16px;
-  padding-right: 100px;
-  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
     display: block;
