@@ -115,3 +115,57 @@ button {
     font-weight: bold;
     letter-spacing: 1px;
 }
+
+/*DIG DEEPER*/
+body {
+    background-color: #e0e1dd;
+    color: #1b263b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pageHeader {
+    background-color: #778da9;
+    padding: 60px;
+    margin-bottom: 40px;
+}
+
+.pageHeader h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.pageHeader p {
+    font-size: 20px;
+    max-width: 900px;
+}
+
+.contentBox {
+    width: 75%;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.contentBox h2 {
+    margin-top: 40px;
+    color: #0d1b2a;
+}
+
+.noticeBox {
+    background-color: #cfd6df;
+    border-left: 5px solid #778da9;
+    padding: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.hiddenSection {
+    margin-top: 60px;
+    padding-top: 20px;
+    color: darkorange;
+    letter-spacing: 2px;
+}
+
+.hiddenSection p {
+    margin-bottom: 30px;
+}
