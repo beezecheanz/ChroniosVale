@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="adminstylesheet.css">
     </head>
 <body>
-<div class="terminal">
+<div id="terminal" style="display:none">
     <h1>EMERGENCY TERMINATION PROTOCOL</h1>
     <P>Make sure that there is no other course of action before committing to this,
     there is no way to undo termination.</P>
@@ -12,6 +12,15 @@
     </div>
     <button id="holdButton">HOLD TO TERMINATE</button>
 </div>
+
+<form onsubmit="return checkLogin()" id="keyform">
+  <div class="container">
+    <p>To proceed further with this action, please input a termination key.</p>
+    <label for="uname"><b>Termination Key</b></label>
+    <input type="text" id="termkey" placeholder="Enter Key" required>
+    <button type="submit">Submit</button>
+  </div>
+</form>
 </body>
 </html>
 
@@ -45,4 +54,23 @@ button.addEventListener("mouseleave", () => {
     progress = 0;
     bar.style.width = progress + "%";
 });
+
+function checkLogin() {
+  var username = document.getElementById("termkey").value;
+  let usernameInput = username.toLowerCase().replace(/\s+/g, "");
+  if (usernameInput === "daughter") {
+    var F = document.getElementById("keyform");
+    var T = document.getElementById("terminal"),
+    displayValue = "";
+    if (T.style.display == "")
+        displayValue = "none";
+    T.style.display = displayValue;
+    F.style.display = "none";
+    return false;
+  } else {
+    alert("INCORRECT KEY");
+    return false;
+  }
+}
+
 </script>

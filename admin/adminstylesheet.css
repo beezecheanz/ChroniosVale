@@ -87,3 +87,16 @@ button:hover {
     background-color: darkorange;
     transition: width 0.1s linear;
 }
+
+#terminal {
+    margin: 10px;
+}
+
+#keyform {
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
