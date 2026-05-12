@@ -121,14 +121,23 @@ function generateInitialLogs() {
 generateInitialLogs();
 
 //live updating logs
+let liveLogCount = 0;
 setInterval(() => {
     const newLine = document.createElement("p");
 
     let message;
-    if (Math.random() < 0.8) {
+    liveLogCount++; 
+
+    if (liveLogCount === 3 || liveLogCount === 8) {
+    newLine.style.color = "#ff440f";
+    message = "01110100 01101000 01100101 00100000 01100100 01100001 01110101 01100111 01101000 01110100 01100101 01110010 00100000 01101001 01110011 00100000 01110100 01101000 01100101 00100000 01101011 01100101 01111001";
+    newLine.classList.add("glitch"); }
+    else {
+        if (Math.random() < 0.8) {
         message = systemMessages[Math.floor(Math.random() * systemMessages.length)];
     } else {
         message = glitchMessages[Math.floor(Math.random() * glitchMessages.length)];
+    }
     }
 
     newLine.innerText = "[" + new Date().toLocaleTimeString() + "] " + message;
