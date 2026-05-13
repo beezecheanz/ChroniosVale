@@ -44,7 +44,7 @@
             <label><input type="radio" name="q2" value="c"> Double check if it is the correct course of action</label><br>
             <label><input type="radio" name="q2" value="d"> Tell your friend what you were told to do</label><br>
 
-            <p>3. Are system outputs ever incorrect?</p>
+            <p>3. Should you ever take time off of work without alerting your supervisor?</p>
             <label><input type="radio" name="q3" value="a"> Yes</label><br>
             <label><input type="radio" name="q3" value="b"> No</label><br>
 
@@ -65,6 +65,10 @@
             <label><input type="radio" name="q6" value="b"> 111,000</label><br>
             <label><input type="radio" name="q6" value="c"> 69,000</label><br>
             <label><input type="radio" name="q6" value="d"> 138,000</label><br> 
+
+            <p>???. Are you going to help me end this?</p>
+            <label><input type="radio" name="qnul" value="a"> Yes</label><br>
+            <label><input type="radio" name="qnul" value="b"> No</label><br>
 
             <br>
             <button type="submit">Submit</button>
@@ -91,8 +95,9 @@
         let q4 = document.querySelector('input[name="q4"]:checked');
         let q5 = document.querySelector('input[name="q5"]:checked');
         let q6 = document.querySelector('input[name="q6"]:checked');
+        let qnul = document.querySelector('input[name="q6"]:checked');
 
-        if (!q1 || !q2 || !q3 || !q4 || !q5 || !q6) {
+        if (!q1 || !q2 || !q3 || !q4 || !q5 || !q6 || !qnul) {
             document.getElementById("result").innerText = "Please answer all questions before attempting to submit.";
             return;
         }

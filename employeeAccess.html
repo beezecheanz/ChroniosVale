@@ -46,6 +46,16 @@ function checkLogin() {
 
   //makes username all lowercase with no spaces
   let usernameInput = username.toLowerCase().replace(/\s+/g, "");
+
+  if (usernameInput === "jane" || usernameInput === "janes"){
+    usernameInput = "janesmith";
+  } else if (usernameInput === "eli" || usernameInput === "elif") {
+    usernameInput = "elifreeman";
+  }
+
+  if (password === "cv-117318" || password === "cv117318") {
+    password = "117318";
+  }
   
   //checks what username and password and sends them to correct page
   if (usernameInput === "janesmith" && password === "apple") {
