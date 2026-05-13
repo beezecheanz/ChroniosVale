@@ -1,0 +1,25 @@
+body {
+    background-color: antiquewhite;
+}
+
+.herSpeech {
+    color: darkorange;
+    animation: colourChange;
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.fadeOut {
+    animation: fadeOut 10s forwards; 
+}
