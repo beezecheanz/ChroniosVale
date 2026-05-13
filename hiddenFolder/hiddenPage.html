@@ -54,6 +54,9 @@
 
         if (!container.lastChild || container.lastChild.tagName !== "P") {
             const p = document.createElement("p");
+            //randomly placed horizontally
+            const randomOffset = Math.floor(Math.random() * 400);
+            p.style.marginLeft = randomOffset + "px";
             container.appendChild(p);
         }
 
@@ -63,11 +66,11 @@
         if (charIndex < currentLine.length) {
             currentP.textContent += currentLine.charAt(charIndex);
             charIndex++;
-            setTimeout(typeLine, 60); //typing speed
+            setTimeout(typeLine, 50); //typing speed
         } else {
             lineIndex++;
             charIndex = 0;
-            setTimeout(typeLine, 700); //pause between lines
+            setTimeout(typeLine, 600); //pause between lines
         }
     }
 

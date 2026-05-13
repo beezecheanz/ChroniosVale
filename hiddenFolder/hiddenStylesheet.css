@@ -1,3 +1,9 @@
 #typewriter {
     color: darkorange;
 }
+
+body {
+    margin: 20px;
+    font-size: larger;
+    background-color: antiquewhite;
+}
